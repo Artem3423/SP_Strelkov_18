@@ -1,4 +1,4 @@
-package ru.ei.works.animalthread;
+package com.company.thread;
 
 public class RabbitAndTurtle {
 
@@ -9,5 +9,7 @@ public class RabbitAndTurtle {
 
         turtle.start();
         rabbit.start();
+
+
     }
 }

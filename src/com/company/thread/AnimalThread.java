@@ -1,10 +1,10 @@
-package ru.ei.works.animalthread;
+package com.company.thread;
 
 public class AnimalThread extends Thread {
 
     String PersonName;
     int priorityThread;
-    final int RANGE = 100;
+    final int DISTANCE = 100;
 
     public AnimalThread(String PersonName, int priorityThread) {
         this.PersonName = PersonName;
@@ -16,10 +16,11 @@ public class AnimalThread extends Thread {
         Thread.currentThread().setPriority(priorityThread);
         Thread.currentThread().setName(PersonName);
 
+        //устанавливаем скорость персонажа
         int timeToStep = 1000 / (Thread.currentThread().getPriority());
 
 
-        for (int i = 1; i < RANGE; i++) {
+        for (int i = 1; i < DISTANCE; i++) {
 
             try {
                 Thread.sleep(timeToStep);
@@ -28,7 +29,7 @@ public class AnimalThread extends Thread {
                 e.printStackTrace();
             }
 
-            if (i == RANGE / 2) {
+            if (i == DISTANCE / 2) {
 
                 if (Thread.currentThread().getPriority() == 1) {
                     Thread.currentThread().setPriority(10);
@@ -36,12 +37,11 @@ public class AnimalThread extends Thread {
                     Thread.currentThread().setPriority(1);
                 }
                 timeToStep = 1000 / (Thread.currentThread().getPriority());
-                System.out.println(" ");
-                System.out.println("Bdbms");
+                System.out.println("magic");
 
             }
-            if (i == RANGE - 1) {
-                System.out.println("Finish");
+            if (i == DISTANCE - 1) {
+                System.out.println(" Finish ");
             }
         }
     }
