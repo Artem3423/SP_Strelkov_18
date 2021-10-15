@@ -34,16 +34,6 @@ public class Main extends Thread{
 
         consoleTime(sequenceCopyTimeBefore, sequenceCopyTimeAfter);
 
-      /*  NewThreadWithNIO copyNIOThread1 = new NewThreadWithNIO(inputWay1, outputWay1);
-        NewThreadWithNIO copyNIOThread2 = new NewThreadWithNIO(inputWay1, outputWay1);
-
-        copyNIOThread1.thread.start();
-        copyNIOThread2.thread.start();
-
-        copyNIOThread1.thread.join();
-        copyNIOThread2.thread.join(); */
-
-
         long sequenceCopyTimeBeforeWithNIO = System.currentTimeMillis();
 
         CopyFile c = new CopyFile(inputWay1, outputWay1);
